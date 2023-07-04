@@ -1,6 +1,12 @@
-div.success {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translateX(-50%);
+.generator {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001632;
+}
+
+.container-form {
+    background-color: whitesmoke;
+    border-radius: .66rem;
 }
