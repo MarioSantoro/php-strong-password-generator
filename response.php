@@ -37,9 +37,15 @@
             <div class="row">
                 <div class="col-12">
                     <div class="response">
-                        <div class="alert alert-success" role="alert">
-                            Password creata con successo!!
-                        </div>
+                        <?php if ($_SESSION['pass'] !== null) {  ?>
+                            <div class="alert alert-success" role="alert">
+                                Password creata con successo!!
+                            </div>
+                        <?php } else { ?>
+                            <div class="alert alert-danger" role="alert">
+                                Password non creata!! Causa : Non hai inserito valori Validi!!!
+                            </div>
+                        <?php } ?>
                         <div class="alert alert-info" role="alert">
                             La tua password è : <?php echo $_SESSION['pass'] ?>
                         </div>

@@ -20,14 +20,14 @@ include_once __DIR__ . '/function.php';
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <?php if (!empty($_GET['lenPassword'])) { ?>
+                <?php if (isset($_GET['lenPassword'])) { ?>
                     <?php $_SESSION['pass'] = createPassword($_GET['lettere'], $_GET['numeri'], $_GET['simboli'], $_GET['lenPassword']) ?>
                     <?php header("Location: http://localhost/classe-98/php-strong-password-generator/response.php/");
                     exit;
                     ?>
                 <?php } else { ?>
                     <div class="alert alert-info" role="alert">
-                        Nessun valore valido inserito
+                        Inserisci un valore
                     </div>
                 <?php } ?>
             </div>
